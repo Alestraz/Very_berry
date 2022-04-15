@@ -32,7 +32,7 @@
       <span class="price"> 370 руб/кг </span>
       </p> 
       <form action="cart.php"  method="post">
-            <input type="number" name="quantity" placeholder="Кол-во кг" style="width:105px;" required>
+            <input type="number" name="quantity" placeholder="Кол-во кг" style="width:105px;" value="1" required>
             <input type="hidden" name="prod_id" value="1">
             <input type="submit" value="Купить 1 сорт">
         </form>
@@ -46,7 +46,7 @@
         <span class="price"> 270 руб/кг </span>
         </p>
         <form action="cart.php"  method="post">
-            <input type="number" name="quantity" placeholder="Кол-во кг" style="width:105px;" required>
+            <input type="number" name="quantity" placeholder="Кол-во кг" style="width:105px;" value="1" required>
             <input type="hidden" name="prod_id" value="2">
             <input type="submit" value="Купить 2 сорт">
         </form>        
@@ -60,7 +60,7 @@
         <span class="price"> 199 руб/кг </span>
         </p>
         <form action="cart.php"  method="post">
-            <input type="number" name="quantity" placeholder="Кол-во кг" style="width:105px;" required>
+            <input type="number" name="quantity" placeholder="Кол-во кг" style="width:105px;" value="1" required>
             <input type="hidden" name="prod_id" value="3">
             <input type="submit" value="Купить 3 сорт">
         </form>
@@ -74,7 +74,7 @@
         <span class="price"> 199 руб/кг </span> 
         </p>
         <form action="cart.php"  method="post">
-            <input type="number" name="quantity"placeholder="Кол-во кг" style="width:105px;"  required>
+            <input type="number" name="quantity"placeholder="Кол-во кг" style="width:105px;" value="1" required>
             <input type="hidden" name="prod_id" value="4">
             <input type="submit" value="Купить Землянику">
         </form>
@@ -88,7 +88,7 @@
         <span class="price"> 299 руб/кг </span>
         </p>
         <form action="cart.php" method="post">
-            <input type="number" name="quantity" placeholder="Кол-во кг" style="width:105px;" required>
+            <input type="number" name="quantity" placeholder="Кол-во кг" style="width:105px;" value="1" required>
             <input type="hidden" name="prod_id" value="5">
             <input type="submit" value="Купить Дикую Землянику">
         </form>

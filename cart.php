@@ -3,7 +3,9 @@
     include "app/include/header.php";
 
 // Creating a card + Adding products
-
+if(isset($_POST['quantity']) && $_POST['quantity'] === 0) {
+    $_POST['quantity'] === '1';
+}
 if (isset($_POST['prod_id'], $_POST['quantity']) && is_numeric($_POST['prod_id']) && is_numeric($_POST['quantity'])) {
     $prod_id = (int)$_POST['prod_id'];
     $quantity = (int)$_POST['quantity'];
@@ -56,7 +58,6 @@ if (isset($_POST['update']) && isset($_SESSION['cart'])) {
 
 if (isset($_POST['order']) && isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
     header('Location: index.php?page=order');
-    exit;
 }
  
 
@@ -93,50 +94,52 @@ if ($products_in_cart) {
 <body>
     
 <div class="cart content-wrapper">
-    <h1>Shopping Cart</h1>
+    <h1>Ваша корзинка с ягодами</h1>
     <form action="cart.php" method="post">
         <table>
             <thead>
                 <tr>
-                    <td colspan="2">Product</td>
-                    <td>Price</td>
-                    <td>Quantity</td>
-                    <td>Total</td>
+                    <td>Ваш товар</td>
+                    <td>Цена</td>
+                    <td>Количество</td>
+                    <td>Итого</td>
                 </tr>
             </thead>
             <tbody>
                 <?php if (empty($products)): ?>
                 <tr>
-                    <td colspan="5" style="text-align:center;">You have no products added in your Shopping Cart</td>
+                    <td colspan="5" style="text-align:center;">Вы не добавили продуктов в Вашу корзинку</td>
                 </tr>
                 <?php else: ?>
                 <?php foreach ($products as $product): ?>
                 <tr>
                     <td>
-                        <a href="cart.phpt&id=<?=$product['id']?>"><?=$product['name']?></a>
-                        <br>
-                        <a href="<?php unset($product['id']); echo "index.php" ?>">Remove</a>
+                        <?=$product['name']?>
                     </td>
-                    <td class="price">&dollar;<?=$product['price']?></td>
+                    <td class="price"><?=$product['price']?></td>
                     <td class="quantity">
-                        <input type="number" name="quantity-<?=$product['id']?>" value="<?=$products_in_cart[$product['id']]?>" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required>
+                        <input type="number" name="quantity-<?=$product['prod_id']?>" value="<?=$products_in_cart[$product['prod_id']]?>" min="1" max="<?=$product['quantity']?>" placeholder="Количество" required>
                     </td>
-                    <td class="price">&dollar;<?=$product['price'] * $products_in_cart[$product['prod_id']]?></td>
+                    <td class="price"><?=$product['price'] * $products_in_cart[$product['prod_id']]?></td>
+                    <td>
+                    <a href="cart.php?remove=<?=$product['prod_id'] ?>" class="remove">Удалить</a>
+                    </td>
                 </tr>
                 <?php endforeach; ?>
                 <?php endif; ?>
             </tbody>
         </table>
         <div class="subtotal">
-            <span class="text">Subtotal</span>
-            <span class="price">&dollar;<?=$subtotal?></span>
+            <span class="text">Итого:</span>
+            <span class="price"><?=$subtotal?></span>
         </div>
         <div class="buttons">
-            <input type="submit" value="Update" name="update">
-            <input type="submit" value="Place Order" name="placeorder">
+            <input type="submit" value="Обновить" name="update">
+            <input type="submit" value="Сделать заказ" name="placeorder">
         </div>
     </form>
 </div>
+
 
 <?php include "app/include/footer.php"; ?>
 

@@ -1,8 +1,7 @@
 <?php
       require "app/database/db.php";
-      
-
 ?>
+
 
 <!doctype html>
 <html lang="ru">
