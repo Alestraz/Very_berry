@@ -1,0 +1,295 @@
+/* Global */
+* {
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color:#5c5b5b;
+}
+body {
+    background-color: #f9f9f9;
+}
+a {
+    text-decoration: none;
+    color: inherit;   
+}
+
+/* Header */
+
+header {
+    background-color: rgb(245, 57, 57);
+    height: 70px;
+    color: #000;
+}
+header h1 {
+    color: #000;
+    margin-top: 8px;
+}
+header h1 a:hover {
+    color: #fff;
+    transition: 0.25s;
+}
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: right;
+}
+header ul li {
+    float: left;
+    position: relative;
+}
+header ul li a {
+    display: block;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 20px;
+}
+header ul a:hover {
+    color: #fff;
+    transition: 0.25s;
+    background-color: rgb(200, 30, 30);
+}
+header ul li ul {
+    position: absolute;
+    z-index: 100;
+    display: none;
+}
+header ul li:hover ul {
+    display: block;
+}
+
+/* Main Text */
+
+.main-text h2 {
+    text-align: center;
+    color: #000;
+    font-weight: 200;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-decoration: underline;
+}
+.main-text a:hover {
+    color: #fff;
+    transition: 0.25s;
+    background-color: rgb(200, 30, 30);
+    border-radius: 2px;
+}
+
+/* Carousel */
+
+.carousel {
+    height: 400px;
+}
+.carousel-inner, .carousel-item {
+    height: 400px;
+}
+.carousel-item h5 {
+    color: #000;
+    margin-top: 100px;
+    font-weight: 600;
+    background-color: rgba(200, 30, 30,0.9);
+    border-radius: 10px;
+    padding: 2px; 
+}
+
+/* Advantages */
+
+.advantages {
+    margin-top: 50px;
+}
+.advantages-block {
+    width: 25%;
+    height: 300px;
+}
+.advantages-block .fas,.advantages-block .fab {
+    width: 100px;
+    height: 100px;
+}
+.advantages h3 {
+    margin-top: 20px;
+}
+
+/* Products */
+
+/* !!! Product 2 имееет свой собстенный style внутри index.html */
+
+.product {
+    margin-bottom: 50px;
+}
+.product img {
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-right: 15px;
+}
+.product a {
+    text-decoration: underline;
+    font-weight: bold;
+}
+.product a:hover {
+    color: #fff;
+    transition: 0.25s;
+    background-color: rgb(200, 30, 30);
+    border-radius: 2px;
+    
+}
+.product span {
+    font-weight: bold;
+}
+
+/* Footer */
+
+.footer {
+    position: relative;
+    background-color:rgb(245, 57, 57); 
+    height: 100px;
+    margin-top: 0px; 
+}
+.contacts {
+    padding: 10px;
+}
+.footer span {
+    padding: 15px;
+    margin: 0 20px;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+.footer span:hover, .footer span a:hover {
+    color: #fff;
+    transition: 0.25s;
+    border-radius: 2px;  
+}
+.footer .text {
+    margin-top: -10px;
+}
+
+/* reg.html */
+
+.reg-form i {
+    margin-top: -35px;
+}
+
+/* log.html */
+
+.log-form i {
+    margin-top: -35px;
+}
+
+.log-form p {
+    text-align: center;
+}
+.log-form p a {
+    text-decoration: underline;
+}
+.log-form p a:hover {
+    color: #fff; 
+    transition: 0.25s;
+    background-color: #bb2d3b;
+    border-radius: 2px;
+}
+
+/* Basket */
+
+.cart h1 {
+	display: block;
+	font-weight: normal;
+	margin: 0;
+	padding: 40px 0;
+	font-size: 30px;
+	text-align: center;
+	width: 100%;
+    color: #000;
+}
+.cart table {
+    margin-left: 125px;
+	width: 80%;
+}
+.cart table thead td {
+	padding: 30px 0;
+	border-bottom: 1px solid #EEEEEE;
+}
+.cart table thead td:last-child {
+	text-align: left;
+}
+.cart table tbody td {
+	padding: 20px 0;
+	border-bottom: 1px solid #EEEEEE;
+}
+.cart table tbody td:last-child {
+	text-align: right;
+}
+.cart table .remove {
+	color: #bb2d3b;
+	font-size: 16px;
+	padding-top: 3px;
+}
+.cart table .remove:hover {
+	text-decoration: underline;
+}
+.cart table .price {
+	color: #000;
+}
+.cart table a {
+	text-decoration: none;
+	color: #000;
+}
+.cart table input[type="number"] {
+	width: 68px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	color: #000;
+	border-radius: 5px;
+}
+.cart .subtotal {
+    margin-left: 125px;
+	text-align: left;
+	padding: 40px 0;
+}
+.cart .subtotal .text {
+	padding-right: 40px;
+    font-weight: 600;
+	font-size: 18px;
+}
+.cart .subtotal .price {
+	font-size: 18px;
+	color: #000;
+    font-weight: 600;
+}
+.cart .buttons {
+	text-align: left;
+    margin-left: 120px;
+	padding-bottom: 40px;
+}
+.cart .buttons input[type="submit"] {
+	margin-left: 5px;
+	padding: 12px 20px;
+	border: 0;
+	background: rgb(245, 57, 57);
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.cart .buttons input[type="submit"]:hover {
+	background: #000;
+}
+.placeorder h1 {
+	display: block;
+	font-weight: normal;
+	margin: 0;
+	padding: 40px 0;
+	font-size: 24px;
+	text-align: center;
+	width: 100%;
+}
+.placeorder p {
+	text-align: center;
+}
